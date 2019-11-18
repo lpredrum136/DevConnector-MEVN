@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://lpredrum136:legolas136@devconnector-ywrbj.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "2ea3d2dc1b01781b4d12",
+  "githubSecret": "3a504934432535d0f79162d8eeea1e68efcdf4a5"
+}
