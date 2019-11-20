@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const connectDB = require('./config/db');
 
 // Import routes
@@ -9,15 +10,11 @@ const posts = require('./routes/api/posts');
 
 const app = express();
 
-// Connect database
-connectDB();
-
 // Init middleware
 app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => {
-  res.send('API running');
-});
+// Connect database
+connectDB();
 
 // Define routes
 app.use('/api/users', users);
