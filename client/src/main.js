@@ -10,6 +10,8 @@ Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false;
 
+console.log(myStore.state.myAuth.isAuthenticated);
+
 new Vue({
   router,
   store: myStore,

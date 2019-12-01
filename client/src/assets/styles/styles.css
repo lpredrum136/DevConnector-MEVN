@@ -1,0 +1,27 @@
+h1 {
+  color: #33a0df;
+}
+
+.fa-twitter {
+  color: #38a1f3
+}
+
+.fa-facebook {
+  color: #3b5998
+}
+
+.fa-instagram {
+  color: #3f729b;
+}
+
+.fa-youtube {
+  color: #c4302b;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+}
+
+.dashboard-actions .fa-user, .dashboard-actions .fa-black-tie, .dashboard-actions .fa-graduation-cap {
+  color: #33a0df;
+}

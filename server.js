@@ -11,7 +11,8 @@ const posts = require('./routes/api/posts');
 const app = express();
 
 // Init middleware
-app.use(express.json({ extended: false }));
+app.use(express.json());
+app.use(cors());
 
 // Connect database
 connectDB();

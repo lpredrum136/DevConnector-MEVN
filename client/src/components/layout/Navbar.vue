@@ -11,8 +11,18 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-item to="#">Developers</b-nav-item>
-          <b-nav-item to="/register">Register</b-nav-item>
-          <b-nav-item to="/login">Login</b-nav-item>
+          <template v-if="userIsAuthenticated">
+            <b-nav-item to="/dashboard">
+              <i class="fas fa-user"></i> Dashboard
+            </b-nav-item>
+            <b-nav-item @click="logoutUser">
+              <i class="fas fa-power-off"></i> Logout
+            </b-nav-item>
+          </template>
+          <template v-else>
+            <b-nav-item to="/register">Register</b-nav-item>
+            <b-nav-item to="/login">Login</b-nav-item>
+          </template>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -20,10 +30,15 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
+
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  computed: mapGetters(["userIsAuthenticated"]),
+  methods: {
+    ...mapActions(["logoutUser"])
+  }
 };
 </script>
 
-<style>
-</style>
+<style></style>
