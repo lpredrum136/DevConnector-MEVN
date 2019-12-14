@@ -132,6 +132,12 @@ const mutations = {
     state.token = null;
     state.isAuthenticated = false;
     state.loading = false;
+  },
+  ACCOUNT_DELETED: state => {
+    localStorage.removeItem('token');
+    state.token = null;
+    state.isAuthenticated = false;
+    state.loading = false;
   }
 };
 

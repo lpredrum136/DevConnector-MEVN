@@ -2,23 +2,27 @@ h1 {
   color: #33a0df;
 }
 
-.fa-twitter {
+.profile-item h2 {
+  color: #33a0df;
+}
+
+.profile-social-inputs .fa-twitter {
   color: #38a1f3
 }
 
-.fa-facebook {
+.profile-social-inputs .fa-facebook {
   color: #3b5998
 }
 
-.fa-instagram {
+.profile-social-inputs .fa-instagram {
   color: #3f729b;
 }
 
-.fa-youtube {
+.profile-social-inputs .fa-youtube {
   color: #c4302b;
 }
 
-.fa-linkedin {
+.profile-social-inputs .fa-linkedin {
   color: #0077b5;
 }
 

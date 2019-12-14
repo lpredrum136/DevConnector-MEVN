@@ -64,7 +64,7 @@
               <b-button variant="light" @click="toggleSocialInputs">Add Social Networks</b-button>
             </b-form-group>
           </b-col>
-          <b-col cols="9" v-if="displaySocialInputs">
+          <b-col cols="9" v-if="displaySocialInputs" class="profile-social-inputs">
             <b-input-group class="mb-2">
               <template v-slot:prepend>
                 <b-input-group-text>

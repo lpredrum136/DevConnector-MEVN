@@ -10,7 +10,9 @@
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="#">Developers</b-nav-item>
+          <b-nav-item to="/profiles">
+            <i class="fas fa-users"></i> Developers
+          </b-nav-item>
           <template v-if="userIsAuthenticated">
             <b-nav-item to="/dashboard">
               <i class="fas fa-user"></i> Dashboard

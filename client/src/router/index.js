@@ -6,6 +6,10 @@ import Login from '../components/auth/Login.vue';
 import Dashboard from '../components/dashboard/Dashboard.vue';
 import CreateProfile from '../components/profile-forms/CreateProfile.vue';
 import EditProfile from '../components/profile-forms/EditProfile.vue';
+import AddExperience from '../components/profile-forms/AddExperience.vue';
+import AddEducation from '../components/profile-forms/AddEducation.vue';
+import Profiles from '../components/profiles/Profiles.vue';
+import Profile from '../components/profile/Profile.vue';
 import myStore from '../store';
 
 Vue.use(VueRouter);
@@ -74,6 +78,34 @@ const routes = [
       if (!localStorage.token) next('/login');
       else next();
     }
+  },
+  {
+    path: '/add-experience',
+    name: 'AddExperience',
+    component: AddExperience,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.token) next('/login');
+      else next();
+    }
+  },
+  {
+    path: '/add-education',
+    name: 'AddEducation',
+    component: AddEducation,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.token) next('/login');
+      else next();
+    }
+  },
+  {
+    path: '/profiles',
+    name: 'Profiles',
+    component: Profiles
+  },
+  {
+    path: '/profile/:id',
+    name: 'Profile',
+    component: Profile
   }
 ];
 
