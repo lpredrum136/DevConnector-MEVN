@@ -11,6 +11,7 @@
     <template v-else>
       <b-alert v-if="myPost.posts.length == 0" variant="info">No posts found</b-alert>
       <template v-else>
+        <PostForm class="mb-5" />
         <PostItem v-for="post in myPost.posts" :key="post._id" :post="post" />
       </template>
     </template>
@@ -20,10 +21,11 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 import PostItem from "./PostItem";
+import PostForm from "./PostForm";
 
 export default {
   name: "Posts",
-  components: { PostItem },
+  components: { PostItem, PostForm },
   computed: mapGetters(["myPost"]),
   methods: {
     ...mapActions(["getPosts"])

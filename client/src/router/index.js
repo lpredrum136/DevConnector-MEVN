@@ -11,6 +11,7 @@ import AddEducation from '../components/profile-forms/AddEducation.vue';
 import Profiles from '../components/profiles/Profiles.vue';
 import Profile from '../components/profile/Profile.vue';
 import Posts from '../components/posts/Posts.vue';
+import Post from '../components/post/Post.vue';
 import myStore from '../store';
 
 Vue.use(VueRouter);
@@ -112,6 +113,15 @@ const routes = [
     path: '/posts',
     name: 'Posts',
     component: Posts,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.token) next('/login');
+      else next();
+    }
+  },
+  {
+    path: '/posts/:postId',
+    name: 'Post',
+    component: Post,
     beforeEnter: (to, from, next) => {
       if (!localStorage.token) next('/login');
       else next();

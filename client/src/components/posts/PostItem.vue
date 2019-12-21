@@ -27,7 +27,7 @@
             :target="`like-reminder-${post._id}`"
             triggers="hover"
           >You must like the post first</b-tooltip>
-          <b-button class="mx-1" variant="info">
+          <b-button :to="`/posts/${post._id}`" class="mx-1" variant="info">
             Discussion
             <b-badge variant="light">{{post.comments.length}}</b-badge>
           </b-button>
