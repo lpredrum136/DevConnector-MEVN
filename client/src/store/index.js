@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import auth from './modules/auth';
 import alert from './modules/alert';
 import profile from './modules/profile';
+import post from './modules/post';
 
 // Load Vuex
 Vue.use(Vuex);
@@ -12,7 +13,8 @@ const myStore = new Vuex.Store({
   modules: {
     myAuth: auth,
     myAlert: alert,
-    myProfile: profile
+    myProfile: profile,
+    myPost: post
   }
 });
 

@@ -1,6 +1,9 @@
 <template>
-  <b-container class="mt-3">
-    <template v-if="userProfile !== null || !userProfileLoading">
+  <b-container class="mt-3 mb-4">
+    <template v-if="userProfile == null && userProfileLoading">
+      <b-spinner label="Spinning" style="margin: 0; position: absolute; top: 50%; left: 50%;"></b-spinner>
+    </template>
+    <template v-else>
       <h1 class="page-title">Dashboard</h1>
       <h2 class="my-3">
         <i class="fas fa-user"></i>
@@ -21,9 +24,6 @@
         <h4>You have not set up a profile, please add some information</h4>
         <b-button to="/create-profile" variant="primary">Create Profile</b-button>
       </div>
-    </template>
-    <template v-else>
-      <b-spinner label="Spinning" style="margin: 0; position: absolute; top: 50%; left: 50%;"></b-spinner>
     </template>
   </b-container>
 </template>

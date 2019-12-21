@@ -14,6 +14,9 @@
             <i class="fas fa-users"></i> Developers
           </b-nav-item>
           <template v-if="userIsAuthenticated">
+            <b-nav-item to="/posts">
+              <i class="fas fa-book-reader"></i> Posts
+            </b-nav-item>
             <b-nav-item to="/dashboard">
               <i class="fas fa-user"></i> Dashboard
             </b-nav-item>
