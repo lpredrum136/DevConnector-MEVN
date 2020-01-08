@@ -116,39 +116,42 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapGetters } from 'vuex';
+
+// Doan nay hoi day ngu chua biet gi, xem htdocs/cioauth de biet cach edit cho chuan
+// thuc ra la thay vi v-model = company thi phang luon v-model = userProfile.company
 export default {
-  name: "EditProfile",
+  name: 'EditProfile',
   data() {
     return {
-      company: "",
-      website: "",
-      location: "",
+      company: '',
+      website: '',
+      location: '',
       status: null,
-      skills: "",
-      bio: "",
-      githubusername: "",
-      youtube: "",
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      linkedin: "",
+      skills: '',
+      bio: '',
+      githubusername: '',
+      youtube: '',
+      facebook: '',
+      twitter: '',
+      instagram: '',
+      linkedin: '',
       displaySocialInputs: false,
 
       statusOptions: [
-        { value: null, text: "* Select professional status" },
-        { value: "Developer", text: "Developer" },
-        { value: "Junior Developer", text: "Junior Developer" },
-        { value: "Senior Developer", text: "Senior Developer" },
-        { value: "Manager", text: "Manager" },
-        { value: "Student or Learning", text: "Student or Learning" },
-        { value: "Instructor or Teacher", text: "Instructor or Teacher" },
-        { value: "Intern", text: "Intern" },
-        { value: "Other", text: "Other" }
+        { value: null, text: '* Select professional status' },
+        { value: 'Developer', text: 'Developer' },
+        { value: 'Junior Developer', text: 'Junior Developer' },
+        { value: 'Senior Developer', text: 'Senior Developer' },
+        { value: 'Manager', text: 'Manager' },
+        { value: 'Student or Learning', text: 'Student or Learning' },
+        { value: 'Instructor or Teacher', text: 'Instructor or Teacher' },
+        { value: 'Intern', text: 'Intern' },
+        { value: 'Other', text: 'Other' }
       ]
     };
   },
-  computed: mapGetters(["userProfile", "userProfileLoading"]),
+  computed: mapGetters(['userProfile', 'userProfileLoading']),
   watch: {
     userProfile(newValue) {
       if (!this.userProfileLoading) {
@@ -156,7 +159,7 @@ export default {
         this.website = this.userProfile.website;
         this.location = this.userProfile.location;
         this.status = this.userProfile.status;
-        this.skills = this.userProfile.skills.join(", ");
+        this.skills = this.userProfile.skills.join(', ');
         this.bio = this.userProfile.bio;
         this.githubusername = this.userProfile.githubusername;
         this.youtube = this.userProfile.social.youtube;
@@ -168,7 +171,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(["getCurrentProfile", "createProfile"]),
+    ...mapActions(['getCurrentProfile', 'createProfile']),
     toggleSocialInputs() {
       this.displaySocialInputs = !this.displaySocialInputs;
     },
