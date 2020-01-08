@@ -120,6 +120,7 @@ import { mapActions, mapGetters } from 'vuex';
 
 // Doan nay hoi day ngu chua biet gi, xem htdocs/cioauth de biet cach edit cho chuan
 // thuc ra la thay vi v-model = company thi phang luon v-model = userProfile.company
+// Dong thoi khi submit form thi lay formdata la company: userProfile.company luon tai vi duoc v-model roi.
 export default {
   name: 'EditProfile',
   data() {
