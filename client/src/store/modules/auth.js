@@ -138,6 +138,11 @@ const mutations = {
     state.token = null;
     state.isAuthenticated = false;
     state.loading = false;
+  },
+  CLEAR_PROFILE: state => {
+    state.profile = null;
+    state.repos = [];
+    state.loading = false;
   }
 };
 
